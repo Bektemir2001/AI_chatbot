@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'chat_bot_token_for_unauthorized_user'
     ];
 
     /**
