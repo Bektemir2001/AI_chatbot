@@ -13,7 +13,7 @@ class TokenController extends Controller
     {
         $text = Carbon::now().rand(10000000, 99999999);
         $token = Hash::make($text);
-        User::create(['chat_bot_token_for_unauthorized_user', $token]);
+        User::create(['chat_bot_token_for_unauthorized_user' => $token]);
 
         return response(['token' => $token]);
     }
